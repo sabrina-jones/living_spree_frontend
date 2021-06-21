@@ -7,8 +7,6 @@ import {Provider} from 'react-redux'
 import App from './App';
 import { create } from 'istanbul-reports';
 
-let reducer = ''
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
@@ -16,8 +14,7 @@ let store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
 ReactDOM.render(
     <Provider store={store}>
       <App />
-    </Provider>
-    ,
+    </Provider>,
   document.getElementById('root')
 );
 
