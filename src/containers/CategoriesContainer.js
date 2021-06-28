@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {fetchCategories} from '../actions/fetchCategories';
 import Categories from '../components/Categories';
 import CategoryInput from '../components/CategoryInput';
+import {Route} from 'react-router-dom'
 
 
 
@@ -17,8 +18,8 @@ class CategoriesContainer extends React.Component{
     render (){
         return (
             <div>
-               <CategoryInput/>
-               <Categories categories={this.props.categories}/>
+               <Route path='/categories/new' component={CategoryInput}/>
+               <Route exact path='/categories' render={() => <Categories categories={this.props.categories}/>}/>
             </div>
         )
     }
