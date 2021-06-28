@@ -4,8 +4,10 @@ import React from 'react'
 const Category = (props) => {
   console.log(props)
 
+let category = props.categories[props.match.params.id - 1]
+
   return (
-    <li> {props.category.name} </li>
+    <li> {category ? category.name : null} </li>
   )
 
 }
