@@ -7,5 +7,5 @@ export const deleteEvent = (eventId, categoryId) => {
       .then(response => response.json())
       .then(category => dispatch({type: 'DELETE_EVENT', payload: category}))
     }
-    
+
   }
