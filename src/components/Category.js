@@ -1,5 +1,5 @@
-
 import React from 'react'
+import EventsContainer from '../containers/EventsContainer'
 
 const Category = (props) => {
   console.log(props)
@@ -7,7 +7,10 @@ const Category = (props) => {
 let category = props.categories[props.match.params.id - 1]
 
   return (
-    <li> {category ? category.name : null} </li>
+    <div>
+    <h2>{category ? category.name : null} </h2>
+     <EventsContainer category={category}/>
+    </div>
   )
 
 }
