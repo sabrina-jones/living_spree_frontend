@@ -5,7 +5,8 @@ const NavBar = (props) => {
 
   return (
     <div>
-      <Link to='/categories' style={{paddingRight: '10px'}}>Categories  </Link>
+      <Link to='/home' style={{paddingRight: '10px'}}>Home</Link>
+      <Link to='/categories' style={{paddingRight: '10px'}}>Categories </Link>
       <Link to='/categories/new'>Add Category</Link>
     </div>
 
