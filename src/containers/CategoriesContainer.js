@@ -5,6 +5,7 @@ import Categories from '../components/Categories';
 import Category from '../components/Category';
 import CategoryInput from '../components/CategoryInput';
 import {Route, Switch} from 'react-router-dom'
+import NavBar from '../components/NavBar';
 
 class CategoriesContainer extends React.Component{
     
@@ -17,6 +18,7 @@ class CategoriesContainer extends React.Component{
     render (){
         return (
             <div>
+              <NavBar/>
               <Switch>
                <Route exact path='/categories/new' component={CategoryInput}/>
                <Route path='/categories/:id' render={(routerProps) => <Category {...routerProps} categories={this.props.categories}/>}/>
