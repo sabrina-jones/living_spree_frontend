@@ -5,7 +5,6 @@ import Categories from '../components/Categories';
 import Category from '../components/Category';
 import CategoryInput from '../components/CategoryInput';
 import {Route, Switch} from 'react-router-dom'
-import NavBar from '../components/NavBar';
 import Home from "../components/Home.js";
 
 
@@ -15,13 +14,9 @@ class CategoriesContainer extends React.Component{
         this.props.fetchCategories()
       }
     
-    
-    
     render (){
         return (
             <div>
-              <NavBar/>
-              
               <Switch>
               <Route exact path="/home" component={Home}/>
                <Route exact path='/categories/new' component={CategoryInput}/>

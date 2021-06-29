@@ -1,6 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addEvent} from '../actions/addEvent'
+import {Typography, AppBar, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container} from '@material-ui/core'
+
+
 
 class EventInput extends React.Component {
 
@@ -39,18 +42,24 @@ class EventInput extends React.Component {
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
-                     <label>Image </label>
+                    <label>Image   </label>
                     <input type="text" name="image_url" value={this.state.image_url} onChange={this.handleChange}/>
-                    <label>Name </label>
+                    <br></br><br></br>
+                    <label>Name   </label>
                     <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/>
+                    <br></br><br></br>
                     <label>Summary </label>
                     <input type="text" name="summary" value={this.state.summary} onChange={this.handleChange}/>
+                    <br></br><br></br>
                     <label>When </label>
                     <input type="text" name="when" value={this.state.when} onChange={this.handleChange}/>
+                    <br></br><br></br>
                     <label>Time </label>
                     <input type="text" name="time" value={this.state.time} onChange={this.handleChange}/>
+                    <br></br><br></br>
                     <label>Where </label>
                     <input type="text" name="where" value={this.state.where} onChange={this.handleChange}/>
+                    <br></br><br></br>
                     <input type="submit"/>
                 </form>
             </div>
